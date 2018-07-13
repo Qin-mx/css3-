@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ruby</title>
+</head>
+<body>
+    <ruby>
+        魑 <rp>(</rp><rt>chī</rt><rp>)</rp>
+        魅 <rp>(</rp><rt>mèi</rt><rp>)</rp>
+        魍 <rp>(</rp><rt>wǎng</rt><rp>)</rp>
+        魉 <rp>(</rp><rt>liǎng</rt><rp>)</rp>
+    </ruby>
+    <hgroup>
+        <h1>Welcome to my WWF</h1>
+        <h2>For a living planet</h2>
+      </hgroup>
+      <script>
+          window.onload = function(){
+              var arr = [1,2,3,4,5,6,7,8,9];
+              function isNUm( arr, val){
+                  for( var i =0;i<arr.length;i++){
+                      if(arr[i] == val){
+                          alert(i)
+                          return i
+                      }
+
+                  }
+              }
+              isNUm(arr,8)
+
+            //   反转函数，类似resolve
+            function res (arr){
+                var brr = [];
+                for( var i =0;i<arr.length;i++){
+                    brr.unshift(arr[i])
+                }
+                console.log(brr)
+                return brr;
+            }
+            res(arr)
+          }
+      </script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+body{
+    background:rgb(26, 25, 25)
+}
+.rain{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    
+}
+.drop{
+    width: 10px;
+    height: 120px;
+    position: absolute;
+    left: 3%;
+    animation: drop 1s linear infinite;
+    bottom: 105%;
+    .stem{
+        width: 1px;
+        height: 60%;
+        margin: 0 auto;
+        background-image: linear-gradient(to bottom,rgba(255,255,255,0),rgba(255,255,255,0.25))
+    }
+    .splat{
+        width: 15px;
+        height: 20px;
+        border-radius:50%;
+        border-top:2px dotted rgba(255,255,255,0.5);
+        opacity: 1;
+        animation: splat 0.5s linear infinite;
+    }
+}
+
+@for $i from 1 to 32 {
+    .drop:nth-child(#{$i}) {
+        left: 3%*$i;
+        bottom: 105%;
+    }
+}
+@mixin drop($delay,$duration) {
+    animation-delay: $delay;
+    animation-duration: $duration;
+}
+
+.drop{
+    &:nth-child(1){
+        @include drop(0.25s,0.525s)
+    }
+    &:nth-child(2){
+        @include drop(0.73s,0.573s)
+    }
+    &:nth-child(3){
+        @include drop(0.34s,0.534s)
+    }
+    &:nth-child(4){
+        @include drop(0.40s,0.534s)
+    }
+    &:nth-child(5){
+        @include drop(0.35s,0.535s)
+    }
+    &:nth-child(6){
+        @include drop(0.72s,0.572s)
+    }
+    &:nth-child(7){
+        @include drop(0.91s,0.591s)
+    }
+    &:nth-child(8){
+        @include drop(0.30s,0.530s)
+    }
+    &:nth-child(9){
+        @include drop(0.79s,0.579s)
+    }
+    &:nth-child(10){
+        @include drop(0.58s,0.558s)
+    }
+    &:nth-child(11){
+        @include drop(0.95s,0.595s)
+    }
+    &:nth-child(12){
+        @include drop(0.48s,0.548s)
+    }
+    &:nth-child(13){
+        @include drop(0.88s,0.588s)
+    }
+    &:nth-child(14){
+        @include drop(0.71s,0.571s)
+    }
+    &:nth-child(15){
+        @include drop(0.54s,0.554s)
+    }
+    &:nth-child(16){
+        @include drop(0.79s,0.578s)
+    }
+    &:nth-child(17){
+        @include drop(0.55s,0.555s)
+    }
+    &:nth-child(18){
+        @include drop(0.591s,0.525s)
+    }
+    &:nth-child(19){
+        @include drop(0.91s,0.591s)
+    }
+    &:nth-child(20){
+        @include drop(0.67s,0.567)
+    }
+    &:nth-child(21){
+        @include drop(0.5s,0.525s)
+    }
+    &:nth-child(22){
+        @include drop(0.2s,0.585s)
+    }
+    &:nth-child(23){
+        @include drop(0.15s,0.5s)
+    }
+    &:nth-child(24){
+        @include drop(0.85s,0.575s)
+    }
+    &:nth-child(25){
+        @include drop(0.75s,0.565s)
+    }
+    &:nth-child(26){
+        @include drop(0.25s,0.555s)
+    }
+    &:nth-child(27){
+        @include drop(0.95s,0.559s)
+    }
+    &:nth-child(28){
+        @include drop(0.15s,0.569s)
+    }
+    &:nth-child(29){
+        @include drop(0.35s,0.596s)
+    }
+    &:nth-child(30){
+        @include drop(0.65s,0.455s)
+    }
+    &:nth-child(31){
+        @include drop(0.6s,0.469s)
+    }
+    &:nth-child(32){
+        @include drop(0.7s,0.505s)
+    }
+   
+}
+
+@keyframes drop{
+    0%{
+        transform: translateY(0vh)
+    }
+    75%{
+        transform: translateY(100vh)
+    }
+    100%{
+        transform: translateY(100vh)
+    }
+}
+
+@keyframes splat{
+    0%{
+        opacity: 1;
+        transform: scale(0)
+    }
+    80% {
+        opacity: 1;
+        transform: scale(0);
+    }
+    90%{
+        opacity: 0.5;
+        transform: scale(1)
+    }
+    100%{
+        opacity: 0;
+        transform: scale(1.5)
+    }
+}

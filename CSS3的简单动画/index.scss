@@ -1,0 +1,16 @@
+.box{
+    width: 100px;
+    height: 100px;
+    background: pink;
+    transition-property: all; // 那些需要动画
+    transition-timing-function: linear; // 动画过程
+    transition-duration: 0.5s; // 动画时间  
+    // transition-delay: 1s; 延迟
+    &:hover{
+        // background: red;
+        // width: 300px;
+        // border-radius: 6px;
+        transform:scale(1,0.5);
+        transform:translateX(100px)
+    }
+}

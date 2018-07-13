@@ -1,0 +1,1 @@
+.box{width:100px;height:100px;background:pink;transition-property:all;transition-timing-function:linear;transition-duration:0.5s}.box:hover{transform:scale(1, 0.5);transform:translateX(100px)}

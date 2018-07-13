@@ -1,0 +1,75 @@
+.wrap {
+  margin: 100px auto;
+  width: 600px;
+  height: 250px;
+  background: url(../images/1528961389984.jpg) repeat center;
+  position: relative;
+}
+
+.wrap .item {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  -webkit-box-shadow: 2px 3px 20px #cccccc;
+  box-shadow: 2px 3px 20px #cccccc;
+  text-align: center;
+}
+
+.box {
+  padding: 10px;
+  margin: 100px auto;
+  border: 1px solid #cccccc;
+}
+
+.box div {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.box .item1 {
+  background: radial-gradient(orange, green);
+}
+
+.box .item2 {
+  background: radial-gradient(ellipse at center, orange, green);
+}
+
+.box .item3 {
+  background: radial-gradient(circle at right, orange, green);
+}
+
+.box .item4 {
+  background: radial-gradient(ellipse at right, orange, green);
+}
+
+.box .item5 {
+  background: radial-gradient(circle at left top, orange, green);
+}
+
+.box .item6 {
+  background: radial-gradient(ellipse at left center, orange, green);
+}
+
+.box .item7 {
+  border-radius: 0;
+  background: repeating-linear-gradient(red 0px, green 10px, yellow 20px);
+}
+
+.box .item8 {
+  background: repeating-radial-gradient(red 0px, green 5px, yellow 10px);
+}
+
+.box .item9 {
+  width: 300px;
+  height: 100px;
+  border-radius: 0;
+  background-image: linear-gradient(45deg, #555 25%, transparent 25%, transparent), linear-gradient(-45deg, #555 25%, transparent 25%, transparent), linear-gradient(45deg, transparent 75%, #555 75%), linear-gradient(-45deg, transparent 75%, #555 75%);
+  background-size: 50px 50px;
+}

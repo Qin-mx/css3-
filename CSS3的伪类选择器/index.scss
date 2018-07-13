@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrap{
+    text-align: center;
+    margin: 100px 0 0;
+}
+img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-transition: -webkit-transform 0.5s ease;
+    transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+    &:hover{
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1)
+    }
+}
+// xx
+
+ul{
+    list-style: none;
+}
+
+.clearfix{
+    zoom: 1;
+    &:after{
+        content:'' ;
+        display: block;
+        height: 0;
+        clear: both;
+    }
+}
+
+.demo{
+    width: 300px;
+    margin: 50px auto;
+    padding:10px;
+    border:1px solid #ccc;
+    li{
+        float: left;
+        margin-right: 4px;
+        padding:2px;
+        width: 20px;
+        border:1px solid #ccc;
+        background: #ff5252;
+        a{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+        }
+    }
+}
+
+// 第一个变色
+li:first-child{
+    background: #ff457f;
+}
+
+// 最后一个变色
+li:last-child{
+    background: green;
+}
+
+// 各行换色
+li:nth-child(2n){
+    background: gold;
+}
+
+// 倒数第二个变色
+li:nth-last-child(2){
+    background: pink;
+}
+// 同类元素
+li:nth-of-type(2){
+    background: #656;
+}
+// 同类元素
+li:nth-last-of-type(2){
+    background: #656;
+}
+// 第一个同类元素
+li:first-of-type{
+    background: #ffffff
+}
+// 只有一个子元素时
+li:only-child{
+    a{color:green;}
+}
+
+li:only-of-type{
+    a{color:green;}
+}
+
+// 伪元素 
+.wys::first-letter{
+    font-size:40px;
+    color: #ff5252;
+    font-weight: bold;
+    float: left;
+}
+.wys::first-line{
+    color: #0f0;
+    font-weight: bold;
+    float: left;
+}
+.wys1{
+    &::after{
+        content: "";
+        display: block;
+        width: 300px;
+        height: 60px;
+        background: url(../images/1528961389984.jpg) center;
+        background-size:100%;
+    }
+    &::before{
+        content: "";
+        display: block;
+        width: 300px;
+        height: 60px;
+        background: url(../images/1528961389984.jpg) center;
+        background-size:100%;
+    }
+}
